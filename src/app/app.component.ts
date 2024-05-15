@@ -2,11 +2,12 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, OnInit, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Country } from './models/country';
+import { CountryThumbnailComponent } from './components/country-thumbnail/country-thumbnail.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HttpClientModule],
+  imports: [RouterOutlet, HttpClientModule, CountryThumbnailComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
