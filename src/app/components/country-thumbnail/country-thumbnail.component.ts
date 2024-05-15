@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'country-thumbnail',
+  selector: 'app-country-thumbnail',
   standalone: true,
   imports: [],
   templateUrl: './country-thumbnail.component.html',

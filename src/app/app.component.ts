@@ -3,11 +3,17 @@ import { Component, OnInit, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Country } from './models/country';
 import { CountryThumbnailComponent } from './components/country-thumbnail/country-thumbnail.component';
+import { SearchbarComponent } from './components/searchbar/searchbar.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, HttpClientModule, CountryThumbnailComponent],
+  imports: [
+    RouterOutlet,
+    HttpClientModule,
+    CountryThumbnailComponent,
+    SearchbarComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
