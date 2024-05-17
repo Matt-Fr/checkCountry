@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+import { Country } from '../../models/country';
+Input;
 @Component({
   selector: 'app-country-thumbnail',
   standalone: true,
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
   templateUrl: './country-thumbnail.component.html',
   styleUrl: './country-thumbnail.component.css',
 })
-export class CountryThumbnailComponent {}
+export class CountryThumbnailComponent {
+  @Input() country!: Country;
+}

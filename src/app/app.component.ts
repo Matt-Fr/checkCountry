@@ -18,8 +18,9 @@ import { SearchbarComponent } from './components/searchbar/searchbar.component';
   styleUrl: './app.component.css',
 })
 export class AppComponent implements OnInit {
-  http = inject(HttpClient);
   posts: any = [];
+  dada: any = [];
+  constructor(private http: HttpClient) {}
   ngOnInit(): void {
     this.fetchCountries();
   }
@@ -28,6 +29,8 @@ export class AppComponent implements OnInit {
       .get<Country[]>('https://restcountries.com/v3.1/alpha?codes=FRA,BEL,GER')
       .subscribe((posts: any) => {
         console.log(posts);
+        this.dada = posts;
+        console.log('dadada' + this.dada);
       });
   }
 }
